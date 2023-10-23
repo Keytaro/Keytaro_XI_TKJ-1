@@ -1,0 +1,24 @@
+# Input total belanjaan pelanggan
+total_belanja = float(input("Masukkan total belanjaan pelanggan: "))
+
+# Inisialisasi variabel diskon
+diskon = 0
+
+# Cek aturan diskon
+if total_belanja > 500000:
+    diskon = 0.10  # Diskon 10%
+elif 300000 <= total_belanja <= 500000:
+    diskon = 0.05  # Diskon 5%
+
+# Hitung jumlah diskon
+jumlah_diskon = total_belanja * diskon
+
+# Hitung total yang harus dibayar
+total_harga = total_belanja - jumlah_diskon
+
+# Tampilkan hasil
+print(f"Total belanjaan: {total_belanja} Rupiah")
+print(f"Diskon: {diskon * 100}%")
+print(f"Jumlah diskon: {jumlah_diskon} Rupiah")
+print(f"Total yang harus dibayar: {total_harga} Rupiah")
+
